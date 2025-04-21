@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Jacquarda+Bastarda+9&family=Share+Tech&family=Titillium+Web&family=VT323&display=swap"
+        rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>  <!-- Tailwind CSS -->
+        <link rel="stylesheet" href="styles.css/style.css"> <!-- Custom CSS -->
+        
+
+</head>
+
+<body
+    class="bg-[url('img/city.jpg')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center h-screen">
+
+    <div id="main-container" class="p-6 rounded-lg shadow-lg w-96 flex flex-col space-y-6">
+        <h2 class="text-5xl font-semibold mb-4 text-center">USER INFO</h2>
+
+        <!-- <form class="form-container grid-form" id="user-form"> -->
+        <form class="form-container" id="user-form">
+
+            <!-- First Name -->
+            <div id="firstname-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="firstname" class="block text-sm font-medium mt-3">First Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Johnny"
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+            <!-- Last Name -->
+            <div id="lastname-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="lastname" class="block text-sm font-medium mt-3">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Silverhand"
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+            <!-- Username -->
+            <div id="username-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="username" class="block text-sm font-medium mt-3">Username:</label>
+            <input type="text" id="username" name="username" placeholder="J111onny"
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+            <!-- Phone Number -->
+            <div id="phone-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="phone" class="block text-sm font-medium mt-3">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="123-456-7890"
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+            <!-- Email -->
+            <div id="email-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="email" class="block text-sm font-medium mt-3">Email:</label>
+            <input type="text" id="email" name="email" placeholder="SilverhandStudios@universal.com"
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+
+            <!-- Operating System -->
+            <div id="os-error" class="hidden text-red-500 text-sm mt-3"></div>
+
+            <label for="os" class="block text-sm font-medium   mt-3">Operating System:</label>
+            <select id="os" name="os" aria-placeholder="Select..."
+                class="w-full p-2 border    rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="" disabled selected>Select your operating system</option>
+                <option value="Windows">Windows</option>
+                <option value="MacOS">MacOS</option>
+                <option value="Linux">Linux</option>
+                <option value="Other">Other</option>
+            </select>
+
+
+            <!-- Province -->
+            <div id="province-error" class="hidden text-red-500 text-sm mt-3"></div>
+            <label for="province" class="block text-sm font-medium   mt-3">Province:</label>
+            <select id="province" name="province" class="w-full p-2 border    rounded-lg focus:outline-none ">
+                <option value="" disabled selected class="">Select your province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="YT">Yukon</option>
+            </select>
+
+            <!-- Terms -->
+            <div id="terms-error" class="hidden text-red-500 text-sm mt-1"></div>
+            <div class="flex items-center mt-4">
+                <input type="checkbox" id="terms" name="terms"
+                    class="h-4 w-4 text-blue-600    rounded focus:ring-blue-500" required>
+                <label for="terms" class="ml-2 text-sm  ">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="button" id="submit-btn"
+                class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                REGISTER
+            </button>
+        </form>
+
+
+    </div>
+
+    <!-- Using grid format -->
+    <div class="pt-5" id="user-grid-container">
+        <div id="user-table">
+
+        </div>
+        <!-- Table content is appended here. See /scripts/main.js -->
+    </div>
+    
+<!-- Note to self: Remember Type module -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
